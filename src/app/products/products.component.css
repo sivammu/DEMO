@@ -1,0 +1,18 @@
+/* Fixed height for card */
+.fixed-card {
+    height: 500px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure the image is smaller */
+  .small-img {
+    height: 180px; /* Adjust this value to make the image smaller */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  /* Card body takes the remaining space */
+  .card-body {
+    flex-grow: 1;
+  }
+  

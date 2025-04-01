@@ -1,0 +1,39 @@
+<p>header component works!</p>
+  
+<div>{{strparent}}</div>
+<h1 *ngIf="show">This is COntent</h1>
+
+<!-- <ul >
+
+    <li *ngFor = "let emp of employees">{{emp}}</li>
+
+</ul> -->
+
+<h1 *ngIf = "!employees" else sample >Loading....</h1>
+
+<div #sample>
+    {{employees}}
+</div>
+
+
+<h1 *ngIf="!cities; then load; else city;"></h1>
+
+<ng-template #load>Loading...</ng-template>
+<ng-template #city>{{cities}}</ng-template>
+
+
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Color</td>
+    </tr>
+        <tr *ngFor = 'let m of mobiles'>
+            <td>{{m.name | uppercase}}</td>
+            <td>{{m.price | test}}</td>
+            <td>{{m.color}}</td>
+        </tr>
+ 
+    
+
+</table>
