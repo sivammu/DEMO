@@ -1,0 +1,20 @@
+<!-- src/app/products/products.component.html -->
+<div *ngIf="isLoading">Loading products...</div>
+<div *ngIf="!isLoading && products.length === 0">No products available.</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card fixed-card">
+            <a [routerLink]="['/product', product.id]">
+            <img class="card-img-top small-img" [src]="product.image" alt="{{ product.title }}">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">{{ product.title | uppercase }}</h5>
+              <p class="card-text">{{ product.description }}</p>
+              <p class="card-text"><small class="text-muted"><strong>Price:</strong> ${{ product.price }}</small></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

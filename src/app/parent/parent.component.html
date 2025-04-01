@@ -1,0 +1,15 @@
+<p>parent works!</p>
+
+<!-- Event Binding - chile to parent communication -->
+<app-child [strParent] ='message' (messageEvent) = 'receiveMessage($event)'></app-child>
+{{recievedMessage}}
+
+<!-- Template reference -->
+
+<app-child #child></app-child>
+
+{{child.data}}
+
+<div>{{childref.data}}</div>
+
+
